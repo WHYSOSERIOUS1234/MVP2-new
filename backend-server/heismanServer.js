@@ -3,6 +3,7 @@ const config = require('./config')[process.env.NODE_ENV || 'dev']
 const app = express()
 const {Client} = require('pg')
 const cors = require('cors')
+
 const connectionString = config.connectionString
 const client = new Client({
     connectionString:connectionString
@@ -11,6 +12,7 @@ const PORT = config.port
 app.use(cors())
 app.use(express.json())
 client.connect()
+app.use(express.static('frontend-server/public'))
 
 app.get('/watchlist', (req,res) => {
   client.query('SELECT * FROM watchList;')
