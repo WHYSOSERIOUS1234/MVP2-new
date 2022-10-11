@@ -1,0 +1,13 @@
+body {
+    background: url('image.jpg')
+
+}
+
+.playersInput {
+ display: flex;
+ flex-wrap: wrap;
+ background-color: grey;
+ text-align: center;
+ width: 500px;
+}
+
