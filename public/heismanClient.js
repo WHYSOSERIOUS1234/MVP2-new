@@ -50,7 +50,7 @@ function fetchCall() {
     div[i].textContent = ""
    } 
     let inputString = valueArr[0] + valueArr[1] 
-    const response =  fetch(url+`\\${inputString}`).then(response=>
+    const response =  fetch(url+'/'+inputString).then(response=>
         response.json()
     ).then(data => {
      
@@ -135,7 +135,7 @@ let deletePlayer = deletePlayerInp.value
    urlArr[1] = '%20' + urlArr[1]
    let inputString = urlArr[0] + urlArr[1]
   console.log(inputString)
-   fetch(url+'\\'+inputString , {
+   fetch(url+'/'+inputString , {
     method:'DELETE'
    }).then(res=> window.location.reload())
 }
