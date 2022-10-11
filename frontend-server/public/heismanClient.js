@@ -1,8 +1,8 @@
 
 
 
-let url = 'http://localhost:3000/watchlist'
-
+// let url = 'http://localhost:3000/watchlist'
+let url = 'https://statistics-kn6b.onrender.com/watchlist'
 
 fetch(url).then(results=> results.json()).then((data) => { 
    
@@ -50,7 +50,7 @@ function fetchCall() {
     div[i].textContent = ""
    } 
     let inputString = valueArr[0] + valueArr[1] 
-    const response =  fetch("http://localhost:3000/watchlist/"+inputString).then(response=>
+    const response =  fetch(url+`\\${inputString}`).then(response=>
         response.json()
     ).then(data => {
      
@@ -109,7 +109,7 @@ function createPlayer() {
               "TFL": tfl.value
             }
             console.log(player)
-const response = fetch('http://localhost:3000/watchlist', {
+const response = fetch(url, {
     method:'POST',
    
     headers: {
@@ -135,7 +135,7 @@ let deletePlayer = deletePlayerInp.value
    urlArr[1] = '%20' + urlArr[1]
    let inputString = urlArr[0] + urlArr[1]
   console.log(inputString)
-   fetch('http://localhost:3000/watchlist/'+inputString , {
+   fetch(url+'\\'+inputString , {
     method:'DELETE'
    }).then(res=> window.location.reload())
 }
