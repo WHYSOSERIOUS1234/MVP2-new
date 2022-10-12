@@ -31,7 +31,7 @@ fetch(url).then(results=> results.json()).then((data) => {
 
 
 
-let button = document.getElementsByClassName('search')[0]
+let button = document.getElementsByClassName('searchBar')[0]
 let input = document.getElementsByClassName('searchBar')[0]
 
 
