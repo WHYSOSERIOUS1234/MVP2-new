@@ -52,8 +52,8 @@ function fetchCall() {
    for(let i = 0; i < div.length; i++) {
     div[i].textContent = ""
    } 
-    let inputString = valueArr[0] + valueArr[1] 
-    const response =  fetch(url+'/'+inputString, {
+    let inputString = valueArr[0] + valueArr[1];
+     fetch(url+'/'+inputString, {
         mehod: 'GET',
         mode: 'cors',
          headers: {
@@ -120,7 +120,7 @@ function createPlayer() {
             console.log(player)
 const response = fetch(url, {
     method:'POST',
-    
+    mode: 'cors',
     headers: {
        'Content-Type': 'application/json'
        },
@@ -143,7 +143,7 @@ let deletePlayer = deletePlayerInp.value
     let urlArr = deletePlayer.split(' ')
    urlArr[1] = '%20' + urlArr[1]
    let inputString = urlArr[0] + urlArr[1]
-  console.log(inputString)
+  
    fetch(url+'/'+inputString , {
     mehod: 'DELETE',
     mode: 'cors',
