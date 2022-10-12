@@ -4,7 +4,10 @@
 // let url = 'http://localhost:3000/watchlist'
 let url = 'https://statistics-kn6b.onrender.com/watchlist'
 
-fetch(url).then(results=> results.json()).then((data) => { 
+fetch(url, {
+    method: 'GET',
+    mode: 'cors'
+}).then(results=> results.json()).then((data) => { 
    
     for(let i = 0; i < data.length; i++) {
         player = data[i]
