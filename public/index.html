@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="heismanClient.js"></script>
     <link rel="stylesheet" href="heisman.css">
-    <title>Document</title>
+    <title>Heisman</title>
 </head>
-<body>
+<body> 
+<div class="searchContainer">
 <input type="search" class="searchBar" placeholder="">
-<button type="button" class="search">search</button>
+<button type="button" class="searchBar">search</button>
+</div>
+<h2>Add a Player</h2>
 <div class="container" >
-<!-- <input class="newPlayer1"> -->
-
  <input type="text" name="playerName" id="playerName" class="playersInput" placeholder="Player Name">
 <input type="text" name="teamName" id="teamName" class="playersInput" placeholder="Team Name">
 <input type="text" name="playerPosition" id="playerPosition" class="playersInput"  placeholder="Position">
@@ -22,8 +23,9 @@
 <input type="text" name="passingYards" id="passingYards" class="playersInput" placeholder="Passing Yards">
 <input type="text" name="rushingYards" id="rushingYards" class="playersInput"  placeholder="rushing Yards">
 <input type="text" name="tfl" id="tfl" class="playersInput" placeholder="tackle for loss">
+<div class="buttons">
 <button class="inputPlayer">create</button>
-
+<button class="inputPlayer">update</button>
 </div>
 <div class="deleteConatainer">
     <input type="text" name="deletePlayer" id="deletePlayer">

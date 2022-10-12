@@ -1,15 +1,158 @@
-body {
+body{
     background: url('image.jpg');
-    color:whitesmoke
-
+    background-size: cover;
 }
 
-.playersInput {
- display: flex;
- flex-wrap: wrap;
- background-color: grey;
- text-align: center;
- width: 500px;
+.searchBar {
+    margin:auto;
+    
 }
 
+input {
+    background-color: #1984c3;
+    color: #fff;
+    padding: 1em 5em;
+    border-radius: 0.5em;
+    border:none;
+    outline:none;
+    transition: all 0.1s ease-out;
+    
+    text-align: center;
+  }
+  
+  input:focus {
+    box-shadow: 0 2px 3px #ccc;
+    border-bottom: 0.25em solid #0f5177;
+    top:-2px;
+  }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: whitesmoke;
+    
+  }
 
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+ 
+  }
+
+
+  .Parent {
+   display: grid;
+    color:white;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: center
+  }
+  
+  
+
+  .playersInput{
+    width:  80%;
+    grid-column: span 4;
+  }
+
+
+
+
+button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85{
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 45px;
+  font-weight: 600;
+  font-family:  'cursive';
+  color: teal;
+  text-shadow: 2px 2px 0px  blue,
+               4px 4px 0px #ee4b2b,
+               6px 6px 0px #00c2cb,
+               8px 8px 0px  gray,
+               10px 10px 0px green;
+}
+p {
+    margin-top: 20px;
+}
+
+p:hover {
+    background-color: black;
+    color: silver;
+   
+  }
+
+
+.buttons{
+   display:inline-block;
+   margin-left: 100px
+ 
+}
