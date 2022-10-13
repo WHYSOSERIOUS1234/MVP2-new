@@ -1,8 +1,8 @@
 
 let cardLink;
 let newDiv;
-let url = 'http://localhost:3000/watchlist'
-// let url = 'https://statistics-kn6b.onrender.com/watchlist/'
+// let url = 'http://localhost:3000/watchlist'
+let url = 'https://statistics-kn6b.onrender.com/watchlist'
 function firtFetch() {
 fetch(url, {
     method: 'GET',
@@ -168,7 +168,7 @@ let deletePlayer = deletePlayerInp.value
     } else {
    urlArr[1] = '%20'+urlArr[1]
    inputString = urlArr[0] + urlArr[1]}
-fetch('http://localhost:3000/watchlist/' + inputString, {
+fetch( url+ '/' + inputString, {
     method: 'DELETE',
     mode: 'cors',
      headers: {
