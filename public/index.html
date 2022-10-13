@@ -6,25 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="heismanClient.js"></script>
     <link rel="stylesheet" href="heisman.css">
-    <title>Heisman</title>
+    <title>HEISMAN WATCH</title>
 </head>
-<body> 
-<input type="text" id="search">
-<button type="button" class="searchBar">search</button>
+<body>
+<h1>HEISMAN WATCH</h1>
+<div class="searchContainer" id="searchContainer">
+<input type="search" class="searchBar" placeholder="PlayerName">
+<button type="button" id="search" class="search">search</button>
+</div>
 <h2>Add a Player</h2>
-<div class="container">
- <input type="text" name="playerName" id="playerName" class="playersInput" placeholder="Player Name">
-<input type="text" name="teamName" id="teamName" class="playersInput" placeholder="Team Name">
-<input type="text" name="playerPosition" id="playerPosition" class="playersInput"  placeholder="Position">
-<input type="text" name="touchdowns" id="touchdowns" class="playersInput"  placeholder="touchdowns">
-<input type="text" name="interceptions" id="interceptions" class="playersInput"  placeholder="Interceptions">
-<input type="text" name="passingYards" id="passingYards" class="playersInput" placeholder="Passing Yards">
-<input type="text" name="rushingYards" id="rushingYards" class="playersInput"  placeholder="rushing Yards">
-<input type="text" name="tfl" id="tfl" class="playersInput" placeholder="tackle for loss">
+<form>
+<input type="text" name="playerName" id="playerName" class="playersInput" placeholder="Player Name" required>
+<input type="text" name="teamName" id="teamName" class="playersInput" placeholder="Team Name" required>
+<input type="text" name="playerPosition" id="playerPosition" class="playersInput"  placeholder="Position"required>
+<input type="text" name="touchdowns" id="touchdowns" class="playersInput"  placeholder="touchdowns" required>
+<input type="text" name="interceptions" id="interceptions" class="playersInput"  placeholder="Interceptions" required>
+<input type="text" name="passingYards" id="passingYards" class="playersInput" placeholder="Passing Yards" required>
+<input type="text" name="rushingYards" id="rushingYards"class="playersInput"  placeholder="rushing Yards"required>
+<input type="text" name="tfl" id="tfl" placeholder="tackle for loss">
+</form>
+<div class="createButton">
 <button class="inputPlayer">create</button>
 </div>
 
+
     <input type="text" name="deletePlayer" id="deletePlayer">
    <button name="Delete" id="deletePlayers">Delete</button>
+
 </body>
 </html>

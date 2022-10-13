@@ -1,12 +1,8 @@
 body{
-    background: url('image.jpg');
-    background-size: cover;
+   background-color: black;
 }
 
-.searchBar {
-    margin:auto;
-    
-}
+
 
 input {
     background-color: #1984c3;
@@ -25,38 +21,26 @@ input {
     border-bottom: 0.25em solid #0f5177;
     top:-2px;
   }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: whitesmoke;
+::placeholder {
+     color: whitesmoke;
     
   }
 
 
-  .container {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: 10px;
-    margin-top: 10px;
-    margin-left: 20px;
- 
-  }
+
 
 
   .Parent {
    display: grid;
     color:white;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin: 0 auto;
     text-align: center
   }
   
   
 
-  .playersInput{
-    width:  80%;
-    grid-column: span 4;
-  }
 
 
 
@@ -74,6 +58,7 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  
 }
 
 button:before {
@@ -90,15 +75,16 @@ button:before {
     #ff00c8,
     #ff0000
   );
+
   position: absolute;
   top: -2px;
   left: -2px;
-  background-size: 400%;
+  background-size: 500%;
   z-index: -1;
   filter: blur(5px);
   -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
   animation: glowing-button-85 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
@@ -122,10 +108,23 @@ button:after {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #222;
+  background: black;
   left: 0;
   top: 0;
   border-radius: 10px;
+  
+}
+h1 {
+  text-align: center;
+  font-size: 45px;
+font-weight: 600;
+font-family:  'cursive';
+color: teal;
+text-shadow: 2px 2px 0px  blue,
+             4px 4px 0px #ee4b2b,
+             6px 6px 0px #00c2cb,
+             8px 8px 0px  gray,
+             10px 10px 0px green;
 }
 
 h2 {
@@ -141,18 +140,47 @@ h2 {
                10px 10px 0px green;
 }
 p {
-    margin-top: 20px;
+
+   background-color: #002bff;
+    margin-top: 15px;
+    color:whitesmoke;
+    font-size: 20px;
+    margin-top: 10px;
+    
+    
 }
 
 p:hover {
-    background-color: black;
-    color: silver;
+    background-color: whitesmoke;
+    color: black;
    
   }
 
 
-.buttons{
-   display:inline-block;
-   margin-left: 100px
- 
+.searchContainer {
+ text-align: center;
+ margin-top: 10px;
+ margin-bottom:10px;
+
 }
+
+form {
+  display: grid;
+  row-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+  margin-bottom: 5px;
+  
+}
+
+.createButton {
+  text-align: right;
+  margin-right: 60px;
+}
+
+
+.homeButton {
+  margin-left: 10px;
+}
+
+
